@@ -1,0 +1,31 @@
+<h1 style="text-align: center;">D&D Dashboard</h1>
+<div style="text-align: center;" >
+  <em><b>Search </b></em> : &nbsp;<input type="search"  [(ngModel)]="searchText"  (keyup)="search()">
+</div>
+<br>
+<br>
+<table class="table tablestyle" >
+  <thead class="thead-dark">
+    <tr >
+     
+      <th scope="col" style="width: 10%;padding-left: 15%;">Equipment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div *ngFor="let obj of equipModalArray;index as i">
+    <tr>
+      <td  style="width: 10%;">{{i+1}}</td>
+      <td  style="width: 40%;">{{obj.name}}</td>
+      <td  style="width: 10%;"><button type="button" class="btn btn-primary" style="height: 30px;" (click)="EqipDetail(obj)">View</button></td>
+    </tr>
+    </div>
+    </tbody>
+    </table>
+    <div *ngIf="errorFlag" style="text-align: center;">
+     <strong> {{errorMsg}} </strong>
+    </div>
+    <div *ngIf="serviceErrorFlag" style="text-align: center;">
+      <strong>{{serviceErrorMsg}}</strong>
+    </div>
+
+

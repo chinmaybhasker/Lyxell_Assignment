@@ -1,0 +1,14 @@
+@media only screen and (max-width: 540px) {
+    h1{
+       font-size: larger;
+    }
+    h2{
+        font-size: larger;
+     }
+
+     table th, table td {
+         padding: 0 px; 
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+}
